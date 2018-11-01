@@ -1,8 +1,8 @@
-<template>
-  <header>
-    <img alt="Vue logo" src="../assets/logo.png"/>
-    <h1><slot/></h1>
-  </header>
+<template lang="pug">
+  header
+    img(alt="Vue logo" src="../assets/logo.png")
+    h1
+      slot
 </template>
 
 <style scoped>
