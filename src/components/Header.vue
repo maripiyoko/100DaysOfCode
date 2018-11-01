@@ -5,18 +5,17 @@
       slot
 </template>
 
-<style scoped>
-header {
-  height: 60px;
-  overflow: hidden;
-  display: flex;
-}
-header img {
-  height: 58px;
-  width: 58px;
-}
-header h1 {
-  flex: 1;
-  margin: 0;
-}
+<style scoped lang="sass">
+header
+  height: 60px
+  overflow: hidden
+  display: flex
+
+  img
+    height: 58px
+    width: 58px
+
+  h1
+    flex: 1
+    margin: 0
 </style>

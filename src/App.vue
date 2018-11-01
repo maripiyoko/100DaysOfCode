@@ -20,25 +20,24 @@ export default {
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  display: flex;
-  flex-direction: column;
-}
-.container {
-  flex: 1;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: row;
-  margin-top: 40px;
-}
-.container > div {
-  width: 300px;
-  height: 300px;
-}
+<style lang="sass">
+#app
+  font-family: 'Avenir', Helvetica, Arial, sans-serif
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  text-align: center
+  color: #2c3e50
+  display: flex
+  flex-direction: column
+
+  .container
+    flex: 1
+    min-height: 100vh
+    display: flex
+    flex-direction: row
+    margin-top: 40px
+
+  .card
+    width: 300px
+    height: 300px
 </style>

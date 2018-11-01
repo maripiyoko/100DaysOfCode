@@ -1,9 +1,8 @@
 <template lang="pug">
-  div
+  .card
     h1 {{msg}}
     p
       slot
-  </div>
 </template>
 
 <script>
@@ -15,8 +14,8 @@ export default {
 }
 </script>
 
-<style scoped>
-div {
-  border: 1px solid black;
-}
+<style scoped lang="sass">
+div
+  border: 1px solid black
+
 </style>
