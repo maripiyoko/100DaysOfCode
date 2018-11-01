@@ -1,17 +1,21 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Header>100DaysOfCodes</Header>
+    <div class="container">
+      <Day001 msg="property message is here">Hello Day001</Day001>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header.vue'
+import Day001 from './components/Day001.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Header, 
+    Day001
   }
 }
 </script>
@@ -23,6 +27,18 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  flex: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
+}
+.container > div {
+  width: 300px;
+  height: 300px;
 }
 </style>
