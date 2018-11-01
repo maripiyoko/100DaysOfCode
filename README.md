@@ -1,4 +1,4 @@
-# day001
+# 100DaysOfCode
 
 ## Project setup
 ```
