@@ -1,21 +1,23 @@
-<template>
-  <div id="app">
-    <Header>100DaysOfCodes</Header>
-    <div class="container">
-      <Day001 msg="property message is here">Hello Day001</Day001>
-    </div>
-  </div>
+<template lang="pug">
+  #app
+    Header
+      | 100DaysOfCodes
+    .container
+      Card(msg="property message is here")
+        | Hello Day001
+      Card(msg="style bind")
+        | Day002
 </template>
 
 <script>
 import Header from './components/Header.vue'
-import Day001 from './components/Day001.vue'
+import Card from './components/Card.vue'
 
 export default {
   name: 'app',
   components: {
     Header, 
-    Day001
+    Card
   }
 }
 </script>
@@ -40,4 +42,8 @@ export default {
   .card
     width: 300px
     height: 300px
+    margin: 20px
+
+p
+  margin: 0
 </style>
