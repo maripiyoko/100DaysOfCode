@@ -36,11 +36,6 @@ export default {
 </script>
 
 <style scoped lang="sass">
-div
-  border: none
-  border-radius: 10px
-  margin: 10px 0
-
 .clickable
   cursor: pointer
 
