@@ -4,20 +4,23 @@
       | 100DaysOfCodes
     .container
       Card(msg="property message is here")
-        | Hello Day001
+        | Day001
       Card(msg="style bind")
         | Day002
+      TodoList(msg="components" footer="Day003")
 </template>
 
 <script>
 import Header from './components/Header.vue'
 import Card from './components/Card.vue'
+import TodoList from './components/TodoList.vue'
 
 export default {
   name: 'app',
   components: {
     Header, 
-    Card
+    Card,
+    TodoList
   }
 }
 </script>
@@ -43,6 +46,10 @@ export default {
     width: 300px
     height: 300px
     margin: 20px
+    border: none
+    border-radius: 10px
+    box-shadow: 2px 2px 3px #f0ddd7
+    background-color: #FFFBFA
 
 p
   margin: 0
