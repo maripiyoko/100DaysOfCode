@@ -1,5 +1,7 @@
 # 100DaysOfCode
 
+Preview　：　https://festive-davinci-01b695.netlify.com/
+
 ## Project setup
 ```
 npm install
