@@ -1,6 +1,6 @@
 # 100DaysOfCode
 
-Preview　：　https://festive-davinci-01b695.netlify.com/
+Preview　：　https://maripiyoko-100daysofcode.netlify.com/
 
 ## Project setup
 ```
