@@ -33,13 +33,15 @@ export default {
   },
   data: function() {
     return {
+      maxId: 0,
       newTodo: "",
       todos: []
     }
   },
   methods: {
     addNewTodo: function() {
-      this.todos.push({ key: this.todos.length+1, name: this.newTodo, status: false })
+      this.maxId++
+      this.todos.push({ key: this.maxId, name: this.newTodo, status: false })
       this.newTodo = ""
     }
   }
