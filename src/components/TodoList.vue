@@ -7,7 +7,7 @@
     p
       | {{ "completed todos=" + totalCompleted }}
     ul
-      Todo(v-for="todo in todos" :name="todo.name" @status-changed="statusChanged")
+      Todo(v-for="todo in todos" :name="todo.name" v-model="todo.status")
     .bottom
       | {{footer}}
 </template>
@@ -41,9 +41,6 @@ export default {
     addNewTodo: function() {
       this.todos.push({ key: this.todos.length+1, name: this.newTodo, status: false })
       this.newTodo = ""
-    },
-    statusChanged: function() {
-      console.log('statusChanged')
     }
   }
 }
