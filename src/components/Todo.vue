@@ -1,18 +1,13 @@
 <template lang="pug">
   li
     label
-      input(type="checkbox" v-model="status" :change="$emit('status-changed')")
+      input(type="checkbox" :checked="status" @input="$emit('input', $event.target.checked)")
       | {{ name }}
 </template>
 
 <script>
 export default {
   name: 'Todo',
-  props: [ 'name' ],
-  data: function() {
-    return {
-      status: false
-    }
-  }
+  props: [ 'name', 'status' ]
 }
 </script>
