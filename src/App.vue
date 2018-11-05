@@ -7,7 +7,7 @@
         | Day001
       Card(msg="style bind")
         | Day002
-      TodoList(msg="components" footer="Day003 - 004")
+      TodoList(msg="components" footer="Day003,4,5")
 </template>
 
 <script>
