@@ -7,7 +7,7 @@
     p
       | {{ "completed todos=" + totalCompleted }}
     ul
-      Todo(v-for="todo in todos" :name="todo.name" v-model="todo.status")
+      Todo(v-for="todo in todos" :key="todo.id" :id="todo.id" :name="todo.name" v-model="todo.status" @delete="deleteTodo")
     .bottom
       | {{footer}}
 </template>
@@ -41,8 +41,16 @@ export default {
   methods: {
     addNewTodo: function() {
       this.maxId++
-      this.todos.push({ key: this.maxId, name: this.newTodo, status: false })
+      this.todos.push({ id: this.maxId, name: this.newTodo, status: false })
       this.newTodo = ""
+    },
+    deleteTodo: function(deletingId) {
+      let index = parseInt(this.todos.findIndex(function(item) {
+        return item.id == deletingId
+      }))
+      if (index >= 0) {
+        this.todos.splice(index, 1)
+      }
     }
   }
 }
