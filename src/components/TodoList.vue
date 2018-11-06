@@ -7,7 +7,7 @@
     p
       | {{ "completed todos=" + totalCompleted }}
     ul
-      Todo(v-for="(todo, index) in todos" :key="todo.id" :name="todo.name" v-model="todo.status" @delete="todos.splice(index, 1)")
+      Todo(v-for="(todo, index) in todos" :key="todo.id" :name="todo.name" v-model="todo.status" @delete="todos.splice(index, 1)" @name-changed="todos[index].name = $event")
     .bottom
       | {{footer}}
 </template>

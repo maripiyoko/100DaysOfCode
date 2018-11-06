@@ -2,7 +2,7 @@
   li
     label.name
       input(type="checkbox" :checked="status" @input="$emit('input', $event.target.checked)")
-      | {{name}}
+      input(type="text" :value="name" @change="$emit('name-changed', $event.target.value)")
     a(class="delete" @click="$emit('delete')" title="delete it!")
       | x
 </template>
