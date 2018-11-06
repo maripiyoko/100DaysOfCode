@@ -1,7 +1,7 @@
 <template lang="pug">
   li
     label.name
-      input(type="checkbox" :checked="status" @input="$emit('input', $event.target.checked)")
+      input(type="checkbox" :checked="value" @input="$emit('input', $event.target.checked)")
       input(type="text" :value="name" @change="$emit('name-changed', $event.target.value)")
     a(class="delete" @click="$emit('delete')" title="delete it!")
       | x
@@ -10,7 +10,7 @@
 <script>
 export default {
   name: 'Todo',
-  props: [ 'name', 'status' ]
+  props: [ 'name', 'value' ]
 }
 </script>
 
