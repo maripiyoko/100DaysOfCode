@@ -25,7 +25,17 @@ li
 .delete
   color: #FF6667
   width: 10px
+  font-size: 24px
 
 a
   cursor: pointer
+
+input
+  font-size: 22px
+  border: none
+  border-bottom: 1px solid #888
+  padding: 5px 10px
+  &:focus
+    outline: 0
+    border-bottom: 1px solid #1ab188
 </style>
