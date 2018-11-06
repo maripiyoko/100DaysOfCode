@@ -1,13 +1,13 @@
 <template lang="pug">
-  .card.todo-list
+  .card
     h1 {{msg}}
     .row
       slot
     input(v-model="newTodo" @change="addNewTodo" placeholder="Add New TODO")
-    p
-      | {{ "completed todos=" + totalCompleted }}
-    ul
-      Todo(v-for="(todo, index) in todos" :key="todo.id" :name="todo.name" v-model="todo.status" @delete="todos.splice(index, 1)")
+    p.stat
+      | {{ numTodoStat }}
+    ul.todo-list
+      Todo(v-for="(todo, index) in todos" :key="todo.id" :name="todo.name" v-model="todo.status" @delete="todos.splice(index, 1)" @name-changed="todos[index].name = $event")
     .bottom
       | {{footer}}
 </template>
@@ -29,6 +29,9 @@ export default {
       return this.todos.reduce(function(sum, todo) {
         return todo.status == true ? sum + 1 : sum
       }, 0)
+    },
+    numTodoStat: function() {
+      return this.totalCompleted + " / " + this.todos.length
     }
   },
   data: function() {
@@ -49,9 +52,17 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+.card
+  display: flex
+  flex-direction: column
+
 .todo-list
   display: flex
   flex-direction: column
+  overflow: scroll
+
+.stat
+  text-align: right
 
 input
   font-size: 22px
