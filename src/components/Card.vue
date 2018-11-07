@@ -1,22 +1,23 @@
 <template lang="pug">
   .card.clickable(:style="style" @click="clickCard")
-    h1 {{msg}}
+    h1 {{title}}
+    FormSample(v-model="style.backgroundColor")
     .row
-      slot
-    .row
-      label
-        | Card Color
-      input(v-model="style.backgroundColor" placeholder="set card color")
-    .row
-      span
-        | click count={{count}}
+      | click count={{count}}
+    .row {{footer}}
 </template>
 
 <script>
+import FormSample from './FormSample.vue'
+
 export default {
   name: 'Card',
+  components: {
+    FormSample
+  },
   props: {
-    msg: String
+    title: String,
+    footer: String,
   },
   data: function() {
     return {
@@ -38,14 +39,4 @@ export default {
 <style scoped lang="sass">
 .clickable
   cursor: pointer
-
-input
-  font-size: 22px
-  border: 1px solid dimgray
-  padding: 5px 10px
-  width: 8ex
-  margin-left: 10px
-  &:focus
-    outline: 0
-    border-color: #1ab188
 </style>
