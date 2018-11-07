@@ -3,9 +3,8 @@
     Header
       | 100DaysOfCodes
     .container
-      Card(msg="property message is here")
-        | Day001
-      Card(msg="style bind")
+      Card(title="property message is here" footer="Day001")
+      Card(title="style bind" footer="Day002")
         | Day002
       TodoList(msg="components" footer="Day003,4,5")
 </template>
@@ -20,7 +19,7 @@ export default {
   components: {
     Header, 
     Card,
-    TodoList
+    TodoList,
   }
 }
 </script>
