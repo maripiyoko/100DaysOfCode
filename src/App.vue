@@ -3,9 +3,16 @@
     Header
       | 100DaysOfCodes
     .container
-      Card(title="property message is here" footer="Day001")
-      Card(title="style bind" footer="Day002")
-        | Day002
+      Card
+        h1(slot="header") 
+          | property message is here
+        .row(slot="footer")
+          | Day001
+      Card
+        h2(slot="header")
+          | style bind
+        .row(slot="footer=")
+          | Day002
       TodoList(msg="components" footer="Day003,4,5")
 </template>
 
