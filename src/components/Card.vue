@@ -1,10 +1,10 @@
 <template lang="pug">
   .card.clickable(:style="style" @click="clickCard")
-    h1 {{title}}
+    slot(name="header")
     FormSample(v-model="style.backgroundColor")
     .row
       | click count={{count}}
-    .row {{footer}}
+    slot(name="footer")
 </template>
 
 <script>
@@ -14,10 +14,6 @@ export default {
   name: 'Card',
   components: {
     FormSample
-  },
-  props: {
-    title: String,
-    footer: String,
   },
   data: function() {
     return {
