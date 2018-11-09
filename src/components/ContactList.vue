@@ -3,7 +3,7 @@
     slot(name="header")
     ul
       li(v-for="contact in contacts" :key="contact.id")
-        slot(name="body" :contact="contact")
+        slot(:contact="contact")
     slot(name="footer")
 </template>
 

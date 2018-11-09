@@ -19,10 +19,9 @@
           | scoped slot 
         .row(slot="footer")
           | Day009
-        div(slot="body" slot-scope="{contact}")
+        div(slot-scope="{contact}")
           div {{ contact.name }}
           div {{ contact.email }}
-        
 </template>
 
 <script>
