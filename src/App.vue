@@ -11,15 +11,24 @@
       Card
         h2(slot="header")
           | style bind
-        .row(slot="footer=")
+        .row(slot="footer")
           | Day002
       TodoList(msg="components" footer="Day003,4,5")
+      ContactList(:contacts="contacts")
+        h1(slot="header")
+          | scoped slot 
+        .row(slot="footer")
+          | Day009
+        div(slot-scope="{contact}")
+          div {{ contact.name }}
+          div {{ contact.email }}
 </template>
 
 <script>
 import Header from './components/Header.vue'
 import Card from './components/Card.vue'
 import TodoList from './components/TodoList.vue'
+import ContactList from './components/ContactList.vue'
 
 export default {
   name: 'app',
@@ -27,6 +36,16 @@ export default {
     Header, 
     Card,
     TodoList,
+    ContactList,
+  },
+  data: function() {
+    return {
+      contacts: [
+        { id: 1, name: 'Jo', email: 'jo@example.com' },
+        { id: 2, name: 'Taro', email: 'taro@example.com' },
+        { id: 3, name: 'Hanney', email: 'hanney@example.com' }
+      ]
+    }
   }
 }
 </script>
@@ -43,6 +62,7 @@ export default {
 
   .container
     flex: 1
+    flex-wrap: wrap
     min-height: 100vh
     display: flex
     flex-direction: row
@@ -59,4 +79,12 @@ export default {
 
 p
   margin: 0
+
+ul
+  margin: 0
+  padding: 0 10px
+  list-style: none
+  li
+    text-align: left
+    margin: 5px 0
 </style>

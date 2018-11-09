@@ -72,12 +72,4 @@ input
   &:focus
     outline: 0
     border-bottom: 1px solid #1ab188
-
-ul
-  margin: 0
-  padding: 0 10px
-  list-style: none
-  li
-    text-align: left
-    margin: 5px 0
 </style>
