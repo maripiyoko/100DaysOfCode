@@ -22,6 +22,7 @@
         div(slot-scope="{contact}")
           div {{ contact.name }}
           div {{ contact.email }}
+      AnimationCard
 </template>
 
 <script>
@@ -29,6 +30,7 @@ import Header from './components/Header.vue'
 import Card from './components/Card.vue'
 import TodoList from './components/TodoList.vue'
 import ContactList from './components/ContactList.vue'
+import AnimationCard from './components/AnimationCard.vue'
 
 export default {
   name: 'app',
@@ -37,6 +39,7 @@ export default {
     Card,
     TodoList,
     ContactList,
+    AnimationCard,
   },
   data: function() {
     return {
