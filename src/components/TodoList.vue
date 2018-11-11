@@ -7,7 +7,8 @@
     p.stat
       | {{ numTodoStat }}
     ul.todo-list
-      Todo(v-for="(todo, index) in todos" :key="todo.id" :name="todo.name" v-model="todo.status" @delete="todos.splice(index, 1)" @name-changed="todos[index].name = $event")
+      transition-group(name="list" enter-active-class="animated slideInRight" leave-active-class="animated fadeOutLeft")
+        Todo(v-for="(todo, index) in todos" :key="todo.id" :name="todo.name" v-model="todo.status" @delete="todos.splice(index, 1)" @name-changed="todos[index].name = $event")
     .bottom
       | {{footer}}
 </template>
