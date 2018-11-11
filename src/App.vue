@@ -23,6 +23,7 @@
           div {{ contact.name }}
           div {{ contact.email }}
       AnimationCard
+      TodoList(msg="transition" footer="Day011")
 </template>
 
 <script>
