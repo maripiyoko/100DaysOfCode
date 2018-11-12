@@ -24,6 +24,14 @@
           div {{ contact.email }}
       AnimationCard
       TodoList(msg="transition" footer="Day011")
+      Modal(buttonTitle="Show Modal One")
+        h2(slot="header")
+          | Modal Sample One
+        div(slot="body")
+          form
+            .ently
+              label Name
+              input(type="text" value="" placeholder="Enter Name")
 </template>
 
 <script>
@@ -32,6 +40,7 @@ import Card from './components/Card.vue'
 import TodoList from './components/TodoList.vue'
 import ContactList from './components/ContactList.vue'
 import AnimationCard from './components/AnimationCard.vue'
+import Modal from './components/Modal.vue'
 
 export default {
   name: 'app',
@@ -41,6 +50,7 @@ export default {
     TodoList,
     ContactList,
     AnimationCard,
+    Modal,
   },
   data: function() {
     return {
