@@ -32,6 +32,14 @@
             .ently
               label Name
               input(type="text" value="" placeholder="Enter Name")
+      .card
+        h1 Mixin
+        div
+          TextShareButton
+        div
+          ImageShareButton
+        div
+          | Day013
 </template>
 
 <script>
@@ -41,6 +49,8 @@ import TodoList from './components/TodoList.vue'
 import ContactList from './components/ContactList.vue'
 import AnimationCard from './components/AnimationCard.vue'
 import Modal from './components/Modal.vue'
+import TextShareButton from './components/TextShareButton.vue'
+import ImageShareButton from './components/ImageShareButton.vue'
 
 export default {
   name: 'app',
@@ -51,6 +61,8 @@ export default {
     ContactList,
     AnimationCard,
     Modal,
+    TextShareButton,
+    ImageShareButton,
   },
   data: function() {
     return {
