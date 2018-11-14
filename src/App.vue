@@ -40,6 +40,14 @@
           ImageShareButton
         div
           | Day013
+      .card
+        h1 Router
+        .page
+          .navigation
+            router-link.routing(to="/page1") Go To Page1
+            router-link.routing(to="/page2") Go To Page2
+          .content
+            router-view
 </template>
 
 <script>
@@ -51,9 +59,11 @@ import AnimationCard from './components/AnimationCard.vue'
 import Modal from './components/Modal.vue'
 import TextShareButton from './components/TextShareButton.vue'
 import ImageShareButton from './components/ImageShareButton.vue'
+import router from './router'
 
 export default {
   name: 'app',
+  router,
   components: {
     Header, 
     Card,
@@ -113,4 +123,20 @@ ul
   li
     text-align: left
     margin: 5px 0
+
+.routing
+  margin: auto
+  text-decoration: none
+  color: #2288cc
+
+.page
+  display: flex
+  flex-direction: column
+  .navigation
+    display: flex
+    flex-direction: row
+    justify-item: center
+    height: 40px
+  .content
+    flex-grow: 1
 </style>
