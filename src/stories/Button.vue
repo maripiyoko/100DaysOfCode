@@ -1,5 +1,5 @@
 <template>
-  <button>MyButton</button>
+  <button>My Button</button>
 </template>
 
 <!--template lang="pug">
