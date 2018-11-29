@@ -1,7 +1,3 @@
-<template>
-  <button>My Button</button>
-</template>
-
-<!--template lang="pug">
+<template lang="pug">
   button
-</template-->
+</template>
